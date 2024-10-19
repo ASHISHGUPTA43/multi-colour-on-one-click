@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changecolor()">changing color</button>
+    <script>
+        
+        const color =["violet","indigo","blue","green","yellow","orange","red"]
+        let a=0;
+        let valid;
+        function changecolor(){
+            clearInterval(valid);
+            valid = setInterval(changebackground,1000)
+        }
+        function changebackground(){
+            
+                document.body.style.backgroundColor = color[a]
+                a= (a+1)%color.length;
+            
+        }
+    </script>
+</body>
+</html>
